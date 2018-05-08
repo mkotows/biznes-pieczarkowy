@@ -1,0 +1,10 @@
+.error{
+    color:red;
+    background-color: yellow;
+}
+
+tr,table,td{
+    border: black solid 1px;
+    padding: 7px;
+    text-align: center;
+}
