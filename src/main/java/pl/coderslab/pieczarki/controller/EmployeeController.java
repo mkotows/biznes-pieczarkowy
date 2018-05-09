@@ -27,7 +27,7 @@ public class EmployeeController {
         List<Employee> list = employeeRepository.findAll();
         model.addAttribute("list", list);
 
-        return "list_employee";
+        return "listEmployee";
     }
 
 

@@ -23,6 +23,8 @@
 </head>
 <body>
 
+<br><br> <a href="/employee/add"> Add new Employee </a> <br><br>
+
 <table>
     <tr>
         <td>Name</td>
