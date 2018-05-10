@@ -15,7 +15,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
-@RequestMapping("/hall")
+@RequestMapping("/mushroomHall")
 public class MushroomHallController {
 
     @Autowired

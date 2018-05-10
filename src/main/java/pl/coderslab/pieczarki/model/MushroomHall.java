@@ -14,6 +14,8 @@ public class MushroomHall {
     @NotBlank
     private String name;
 
+    private String description;
+
     public MushroomHall() {
     }
 
@@ -33,6 +35,13 @@ public class MushroomHall {
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 //    @Override
 //    public String toString() {
 //        if (this==null)

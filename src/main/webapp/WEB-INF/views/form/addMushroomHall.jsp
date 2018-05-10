@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: mateusz
-  Date: 10.05.18
-  Time: 21:52
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<%@include file="/resources/header.jsp" %>
 
-</body>
-</html>
+
+<form:form method="post" modelAttribute="mushroomHall">
+    <label>Name <form:input path="name"/></label>
+    <p><form:errors path="name" cssClass="error"/> </p>
+    <label>Description <form:input path="description"/></label><br>
+
+    <input type="submit" value="Add">
+</form:form>
+
+
+
+<%@include file="/resources/footer.jsp" %>
+

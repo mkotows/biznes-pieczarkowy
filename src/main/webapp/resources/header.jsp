@@ -15,6 +15,13 @@
     <link rel="stylesheet" type="text/css" href="/resources/styles.css">
 </head>
 <body>
+<div class="menu">
+    <a href="/mushroomHall"> Mushroom Halls </a> <br>
+    <a href="/employee"> Employees </a> <br>
+    <a href="/expense"> Expenses </a> <br>
+    <a href="/task"> Tasks </a> <br>
+</div>
+<br><br><br>
 <div>
 
 
