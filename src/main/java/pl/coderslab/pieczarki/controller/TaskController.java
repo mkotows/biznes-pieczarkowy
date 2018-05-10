@@ -14,6 +14,7 @@ import pl.coderslab.pieczarki.repository.TaskRepository;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Controller
@@ -29,7 +30,9 @@ public class TaskController {
 
     @ModelAttribute("employees")
     public List<Employee> employees (){
-        return employeeRepository.findAll();
+        List<Employee> employees = employeeRepository.findAll();
+        employees.sort(Comparator.comparing(Employee::getName).reversed());
+        return employees;
     }
 
     @ModelAttribute("mushroomHalls")
@@ -38,12 +41,13 @@ public class TaskController {
     }
 
     @ModelAttribute("tasks")
-    public List<String> getTasks(){
+    public List<String> tasks(){
         List<String> tasks =  new ArrayList<>();
         tasks.add("Preparing cultivation");
         tasks.add("Caring for cultivation ");
         tasks.add("Picking mushrooms");
         tasks.add("Cleaning after cultivation");
+        tasks.add("Other");
 
         return tasks;
     }

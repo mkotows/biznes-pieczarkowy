@@ -32,4 +32,12 @@ public class MushroomHall {
     public void setName(String name) {
         this.name = name;
     }
+
+//    @Override
+//    public String toString() {
+//        if (this==null)
+//            return "All";
+//        else
+//            return "name";
+//    }
 }

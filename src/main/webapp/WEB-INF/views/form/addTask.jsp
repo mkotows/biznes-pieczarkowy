@@ -3,9 +3,8 @@
 
 
 <form:form method="post" modelAttribute="task">
-    <%--<label>Task <form:input path="name"/></label>--%>
-    <%--<p><form:errors path="name" cssClass="error"/> </p>--%>
-    <label>Task <form:input path="name"/></label>
+
+    <label>Task <form:select path="name" items="${tasks}"/></label>
     <p><form:errors path="name" cssClass="error"/> </p>
     <label>Description <form:textarea path="description"/></label><br><br>
     <label>Date <form:input path="date" type="date"/></label>
@@ -35,6 +34,15 @@
 
 
 <script>
+
+    var a = $('#salary').val();
+    var n = $("input:checked").length;
+
+    $("#cost").val(n*a);
+
+    var b = $('#duration').val();
+    var result = (a/b).toFixed(2);
+    $('#lab').text(result);
 
     $("#salary").add('#duration').change(function () {
 

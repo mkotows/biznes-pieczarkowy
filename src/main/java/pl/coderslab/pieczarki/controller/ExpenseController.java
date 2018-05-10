@@ -6,7 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pl.coderslab.pieczarki.model.Expense;
+import pl.coderslab.pieczarki.model.MushroomHall;
 import pl.coderslab.pieczarki.repository.ExpenseRepository;
+import pl.coderslab.pieczarki.repository.MushroomHallRepository;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -17,18 +19,16 @@ import java.util.List;
 public class ExpenseController {
 
     @Autowired
+    MushroomHallRepository mushroomHallRepository;
+    @Autowired
     ExpenseRepository expenseRepository;
 
-    @GetMapping
-    public String expenses(Model model){
-
-        List<Expense> list = expenseRepository.findAll();
-        model.addAttribute("list", list);
-
-        return "listExpense";
+    @ModelAttribute("mushroomHalls")
+    public List<MushroomHall> getMushroomList(){
+        return mushroomHallRepository.findAll();
     }
 
-    @ModelAttribute
+    @ModelAttribute("expenses")
     public List<String> getExpenseName(){
         List<String> expenses = new ArrayList<>();
         expenses.add("Electrity");
@@ -41,12 +41,21 @@ public class ExpenseController {
         return expenses;
     }
 
+    @GetMapping
+    public String expenses(Model model){
+
+        List<Expense> list = expenseRepository.findAll();
+        model.addAttribute("list", list);
+
+        return "listExpense";
+    }
 
     @GetMapping("/add")
     public String addExpense(Model model){
         model.addAttribute("expense", new Expense());
         return "/form/addExpense";
     }
+
 
     @PostMapping("/add")
     public String addExpense(@Valid Expense expense, BindingResult result){

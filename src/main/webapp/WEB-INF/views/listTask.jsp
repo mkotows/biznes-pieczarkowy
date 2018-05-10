@@ -13,6 +13,9 @@
         <td>Duration</td>
         <td>Salary</td>
         <td>Total cost</td>
+        <td>Edit</td>
+        <td>Delete cost</td>
+
     </tr>
     <c:forEach items="${list}" var="task">
         <tr>
