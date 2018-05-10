@@ -13,6 +13,7 @@ import pl.coderslab.pieczarki.repository.MushroomHallRepository;
 import pl.coderslab.pieczarki.repository.TaskRepository;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -26,12 +27,20 @@ public class TaskController {
     @Autowired
     MushroomHallRepository mushroomHallRepository;
 
-    @ModelAttribute
+    @ModelAttribute("employees")
     public List<Employee> employees (){
         return employeeRepository.findAll();
     }
 
-    @ModelAttribute
+//    @ModelAttribute("employees")
+//    public List<String> employees (){
+//        List<String> employees = new ArrayList<>();
+//        employees.add("adam");
+//        employees.add("mateusz");
+//        return employees;
+//    }
+
+    @ModelAttribute("mushroomHalls")
     public List<MushroomHall> mushroomHalls(){
         return mushroomHallRepository.findAll();
     }

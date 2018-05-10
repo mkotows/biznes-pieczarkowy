@@ -1,5 +1,6 @@
 <%@include file="/resources/header.jsp" %>
 
+
 <br><br> <a href="/task/add"> Add new Task </a> <br><br>
 
 <table>
@@ -18,7 +19,7 @@
             <td>${task.task}</td>
             <td>${task.description}</td>
             <td>${task.date}</td>
-            <td>${task.mushroomHall}</td>
+            <td>${task.mushroomHall.name}</td>
             <td>${task.employees}</td>
             <td>${task.duration}</td>
             <td>${task.salary}</td>
@@ -28,5 +29,7 @@
         </tr>
     </c:forEach>
 </table>
+
+
 
 <%@include file="/resources/footer.jsp" %>

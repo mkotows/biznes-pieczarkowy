@@ -1,8 +1,6 @@
 package pl.coderslab.pieczarki.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -16,7 +14,6 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
     private String task;
 
     private String description;
@@ -24,10 +21,10 @@ public class Task {
     @NotNull
     private Date date;
 
-    @NotBlank
+    @NotNull
     private BigDecimal duration;
 
-    @NotEmpty
+    @NotNull
     private BigDecimal salary;
 
     private BigDecimal cost;

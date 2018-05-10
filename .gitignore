@@ -25,3 +25,5 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/src/main/java/pl/coderslab/pieczarki/converter/LocalDateConverter.java
+/src/main/java/pl/coderslab/pieczarki/converter/MyAppProperties.java
