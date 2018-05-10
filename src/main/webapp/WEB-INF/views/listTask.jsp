@@ -5,7 +5,7 @@
 
 <table>
     <tr>
-        <td>Task</td>
+        <td>Name</td>
         <td>Description</td>
         <td>Date</td>
         <td>Mushroom Hall</td>
@@ -16,7 +16,7 @@
     </tr>
     <c:forEach items="${list}" var="task">
         <tr>
-            <td>${task.task}</td>
+            <td>${task.name}</td>
             <td>${task.description}</td>
             <td>${task.date}</td>
             <td>${task.mushroomHall.name}</td>

@@ -14,7 +14,7 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String task;
+    private String name;
 
     private String description;
 
@@ -33,7 +33,7 @@ public class Task {
     @ManyToMany
     private List<Employee> employees;
 
-    @ManyToOne
+    @ManyToOne//(fetch=FetchType.EAGER)
     @JoinColumn(name="mushroomHallId")
     private MushroomHall mushroomHall;
 
@@ -48,12 +48,12 @@ public class Task {
         this.id = id;
     }
 
-    public String getTask() {
-        return task;
+    public String getName() {
+        return name;
     }
 
-    public void setTask(String task) {
-        this.task = task;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

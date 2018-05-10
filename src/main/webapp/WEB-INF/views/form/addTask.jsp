@@ -3,8 +3,10 @@
 
 
 <form:form method="post" modelAttribute="task">
-    <label>Task <form:input path="task"/></label>
-    <p><form:errors path="task" cssClass="error"/> </p>
+    <%--<label>Task <form:input path="name"/></label>--%>
+    <%--<p><form:errors path="name" cssClass="error"/> </p>--%>
+    <label>Task <form:input path="name"/></label>
+    <p><form:errors path="name" cssClass="error"/> </p>
     <label>Description <form:textarea path="description"/></label><br><br>
     <label>Date <form:input path="date" type="date"/></label>
     <p><form:errors path="date" cssClass="error"/> </p>
@@ -22,7 +24,6 @@
     <p><form:errors path="cost" id="cost" value="5" cssClass="error"/> </p>
     <br>
     <label>Mushroom Hall<form:select path="mushroomHall">
-        <form:option value="-" label="--Please Select--"/>
         <form:option value="0" label="All"/>
         <form:options items="${mushroomHalls}" itemValue="id" itemLabel="name"/>
     </form:select></label>

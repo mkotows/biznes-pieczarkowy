@@ -32,17 +32,20 @@ public class TaskController {
         return employeeRepository.findAll();
     }
 
-//    @ModelAttribute("employees")
-//    public List<String> employees (){
-//        List<String> employees = new ArrayList<>();
-//        employees.add("adam");
-//        employees.add("mateusz");
-//        return employees;
-//    }
-
     @ModelAttribute("mushroomHalls")
     public List<MushroomHall> mushroomHalls(){
         return mushroomHallRepository.findAll();
+    }
+
+    @ModelAttribute("tasks")
+    public List<String> getTasks(){
+        List<String> tasks =  new ArrayList<>();
+        tasks.add("Preparing cultivation");
+        tasks.add("Caring for cultivation ");
+        tasks.add("Picking mushrooms");
+        tasks.add("Cleaning after cultivation");
+
+        return tasks;
     }
 
     @GetMapping
