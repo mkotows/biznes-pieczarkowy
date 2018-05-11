@@ -1,11 +1,10 @@
 <%@include file="/resources/header.jsp" %>
 
 
-
-<br><br> <a href="/mushroomHall/add"> Add new Mushroom Hall </a> <br><br>
+<a href="/mushroomHall/add"> <button type="button" class="btn btn-success"> Add new Mushroom Hall </button> </a> <br><br>
 
 <table>
-    <tr>
+    <tr class="headers">
         <td>Name</td>
         <td>Description</td>
         <td>Edit</td>

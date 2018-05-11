@@ -1,10 +1,10 @@
 <%@include file="/resources/header.jsp" %>
 
 
-<br><br> <a href="/expense/add"> Add new Expense </a> <br><br>
+<a href="/expense/add"> <button type="button" class="btn btn-success"> Add new Expense </button> </a> <br><br>
 
 <table>
-    <tr>
+    <tr class="headers">
         <td>Name</td>
         <td>Cost</td>
         <td>Date</td>
@@ -18,7 +18,10 @@
             <td>${expense.name}</td>
             <td>${expense.cost}</td>
             <td>${expense.date}</td>
-            <td>${expense.mushroomHall.name}</td>
+            <td> <c:choose>
+                <c:when test="${expense.mushroomHall==null}">All</c:when>
+                <c:otherwise>${expense.mushroomHall.name}</c:otherwise>
+            </c:choose> </td>
             <td>${expense.description}</td>
 
             <td><a href="/expense/edit/${expense.id}"> edit </a></td>

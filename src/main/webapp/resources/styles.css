@@ -10,5 +10,17 @@ tr,table,td{
 }
 
 .menu{
-    padding: 17px;
+    padding: 10px;
+}
+
+div{
+    margin-left: 30px;
+    padding: 10px;
+}
+
+.headers{
+    color: white;
+    background-color: darkgoldenrod;
+    font-size: 25px;
+    text-decoration-style: solid;
 }

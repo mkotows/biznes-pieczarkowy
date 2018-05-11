@@ -6,7 +6,7 @@
 
     <label>Task <form:select path="name" items="${tasks}"/></label>
     <p><form:errors path="name" cssClass="error"/> </p>
-    <label>Description <form:textarea path="description"/></label><br><br>
+    <label>Description <form:textarea path="description"/> </label><br><br>
     <label>Date <form:input path="date" type="date"/></label>
     <p><form:errors path="date" cssClass="error"/> </p>
     <label>Salary <form:input path="salary" id="salary" min="0" type="number" step="0.5"/></label>

@@ -2,10 +2,10 @@
 
 
 
-<br><br> <a href="/employee/add"> Add new Employee </a> <br><br>
+<a href="/employee/add"><button type="button" class="btn btn-success"> Add new Employee </button> </a> <br><br>
 
 <table>
-    <tr>
+    <tr class="headers">
         <td>Name</td>
         <td>Surname</td>
         <td>Phone</td>

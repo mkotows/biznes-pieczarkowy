@@ -8,7 +8,7 @@
     <p><form:errors path="surname" cssClass="error"/></p>
     <label>Email <form:input path="email"/></label>
     <p><form:errors path="email" cssClass="error"/></p>
-    <label>Phone <form:input path="phone"/></label>
+    <label>Phone <form:input path="phone"/></label><<br>
     <input type="submit" value="Add">
 </form:form>
 

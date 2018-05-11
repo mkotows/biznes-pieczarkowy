@@ -7,7 +7,7 @@ ${resultText}
 <br>
 
 <table>
-    <tr>
+    <tr class="headers">
         <td>Name</td>
         <td>Description</td>
         <td>Date</td>
@@ -17,7 +17,7 @@ ${resultText}
         <td>Salary</td>
         <td>Total cost</td>
         <td>Edit</td>
-        <td>Delete cost</td>
+        <td>Delete</td>
 
     </tr>
     <c:forEach items="${tasks}" var="task">
@@ -25,7 +25,10 @@ ${resultText}
             <td>${task.name}</td>
             <td>${task.description}</td>
             <td>${task.date}</td>
-            <td>${task.mushroomHall.name}</td>
+            <td> <c:choose>
+                <c:when test="${task.mushroomHall==null}">All</c:when>
+                <c:otherwise>${task.mushroomHall.name}</c:otherwise>
+            </c:choose> </td>
             <td>${task.employees}</td>
             <td>${task.duration}</td>
             <td>${task.salary}</td>
@@ -42,7 +45,7 @@ ${resultText}
 <br>
 
 <table>
-    <tr>
+    <tr class="headers">
         <td>Name</td>
         <td>Cost</td>
         <td>Date</td>
@@ -56,7 +59,10 @@ ${resultText}
             <td>${expense.name}</td>
             <td>${expense.cost}</td>
             <td>${expense.date}</td>
-            <td>${expense.mushroomHall.name}</td>
+            <td> <c:choose>
+                <c:when test="${expense.mushroomHall==null}">All</c:when>
+                <c:otherwise>${expense.mushroomHall.name}</c:otherwise>
+            </c:choose> </td>
             <td>${expense.description}</td>
 
             <td><a href="/expense/edit/${expense.id}"> edit </a></td>
