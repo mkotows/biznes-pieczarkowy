@@ -14,6 +14,7 @@ import pl.coderslab.pieczarki.repository.TaskRepository;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
+import java.util.function.Consumer;
 
 @Controller
 @RequestMapping("/raport")

@@ -9,6 +9,7 @@ tr,table,td{
     text-align: center;
 }
 
+
 .menu{
     padding: 10px;
 }
@@ -20,7 +21,8 @@ div{
 
 .headers{
     color: white;
-    background-color: darkgoldenrod;
+    background-color: cadetblue;
     font-size: 25px;
     text-decoration-style: solid;
 }
+
