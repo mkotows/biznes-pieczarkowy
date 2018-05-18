@@ -1,34 +1,37 @@
 <%@include file="/resources/header.jsp" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 <form:form method="post" modelAttribute="task">
 
-    <label>Task <form:select path="name" items="${tasks}"/></label>
+    <label>Nazwa <form:select path="name" items="${tasks}"/></label>
     <p><form:errors path="name" cssClass="error"/> </p>
-    <label>Description <form:textarea path="description"/> </label><br><br>
-    <label>Date <form:input path="date" type="date"/></label>
+    <label>Opis <form:textarea path="description"/> </label><br><br>
+    <label>Data <form:input path="date" type="date"/></label>
     <p><form:errors path="date" cssClass="error"/> </p>
-    <label>Salary <form:input path="salary" id="salary" min="0" type="number" step="0.5"/></label>
+    <label>Wynagrodzenie <form:input path="salary" id="salary" min="0" type="number" step="0.5"/></label>
     <p><form:errors path="salary" cssClass="error"/> </p>
-    <label>Duration <form:input path="duration" id="duration" min="0" type="number" step="0.5"/></label>
+    <label> Czas pracy <form:input path="duration" id="duration" min="0" type="number" step="0.5"/></label>
     <p><form:errors path="duration" cssClass="error"/> </p>
-    Salary per hour:
+    Godzinówka:
     <label id="lab">0</label>
     <br><br>
-    <label>Employees<form:checkboxes path="employees" items="${employees}" id="checkboxes1" itemValue="id" itemLabel="surname"/>
+    <label>Pracownicy<form:checkboxes path="employees" items="${employees}" id="checkboxes1" itemValue="id" itemLabel="surname"/>
     </label>
     <br><br>
-    <label>Cost <form:input path="cost" min="0" readonly="true"/></label>
-    <p><form:errors path="cost" id="cost" value="5" cssClass="error"/> </p>
+    <label>Koszt całkowity <form:input path="cost" id="cost" min="0" readonly="true"/></label>
+    <p><form:errors path="cost" cssClass="error"/> </p>
     <br>
-    <label>Mushroom Hall<form:select path="mushroomHall">
-        <form:option value="0" label="All"/>
+    <label>Hala pieczarkowa<form:select path="mushroomHall">
+        <form:option value="0" label="Wszystkie"/>
         <form:options items="${mushroomHalls}" itemValue="id" itemLabel="name"/>
     </form:select></label>
 
     <br><br>
-    <input type="submit" value="Add">
+    <input type="submit" value="Dodaj">
 
 </form:form>
 

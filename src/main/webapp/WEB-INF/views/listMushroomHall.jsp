@@ -1,22 +1,23 @@
 <%@include file="/resources/header.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 
 
-<a href="/mushroomHall/add"> <button type="button" class="btn btn-success"> Add new Mushroom Hall </button> </a> <br><br>
+<a href="/mushroomHall/add"> <button type="button" class="btn btn-success"> Dodaj halę pieczarkową </button> </a> <br><br>
 
 <table>
     <tr class="headers">
-        <td>Name</td>
-        <td>Description</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>Nazwa</td>
+        <td>Opis dodatkowy</td>
+        <td>Edycja</td>
+        <td>Usuwanie</td>
 
     </tr>
     <c:forEach items="${list}" var="mushroomHall">
         <tr>
             <td>${mushroomHall.name}</td>
             <td>${mushroomHall.description}</td>
-            <td><a href="/mushroomHall/edit/${mushroomHall.id}"> edit </a></td>
-            <td><a href="/mushroomHall/delete/${mushroomHall.id}"> delete </a> </td>
+            <td><a href="/mushroomHall/edit/${mushroomHall.id}"> edytuj </a></td>
+            <td><a href="/mushroomHall/delete/${mushroomHall.id}"> usuń </a> </td>
         </tr>
     </c:forEach>
 </table>

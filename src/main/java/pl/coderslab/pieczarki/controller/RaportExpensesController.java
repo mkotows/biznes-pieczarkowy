@@ -14,11 +14,10 @@ import pl.coderslab.pieczarki.repository.TaskRepository;
 import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
-import java.util.function.Consumer;
 
 @Controller
-@RequestMapping("/raport")
-public class RaportController {
+@RequestMapping("/raport/expenses")
+public class RaportExpensesController {
 
     @Autowired
     ExpenseRepository expenseRepository;
@@ -34,20 +33,20 @@ public class RaportController {
 
     @GetMapping
     public String getRaports(){
-        return "/raport/listRaport";
+        return "raport/listRaportExpenses";
     }
 
     @PostMapping("/one")
 //    @ResponseBody
     public String reportForOneHall(Model model,
-                                   @RequestParam String halls,
+                                   @RequestParam String hallId,
                                    @RequestParam String start,
                                    @RequestParam String end
                                    ){
 
 
-//        System.out.println(halls);
-        MushroomHall mushroomHall = mushroomHallRepository.getOne(Long.parseLong(halls));
+//        System.out.println(hallId);
+        MushroomHall mushroomHall = mushroomHallRepository.getOne(Long.parseLong(hallId));
 
         Date start1 = Date.valueOf(start);
         Date end1 =  Date.valueOf(end);
@@ -60,10 +59,10 @@ public class RaportController {
         model.addAttribute("tasks",tasks);
         model.addAttribute("resultText",resultText);
 
-        return "/raport/listResult";
+        return "raport/listResultExpenses";
     }
 
-    @PostMapping("/two")
+    @PostMapping("/all")
     public String reportForAllHall(Model model,
                                    @RequestParam String start,
                                    @RequestParam String end ){
@@ -82,7 +81,7 @@ public class RaportController {
         model.addAttribute("tasks",tasks);
         model.addAttribute("resultText",resultText);
 
-        return "/raport/listResult";
+        return "raport/listResultExpenses";
     }
 
 
@@ -99,10 +98,10 @@ public class RaportController {
 
         BigDecimal totalCosts = sumExpense.add(sumTask);
 
-        return "Raport for date from " + start + " to " + end + "<br>" +
-                "Total cost: " + totalCosts + " $ <br>" +
-                "All salaries: " + sumTask.toString() + " $ <br>" +
-                "All expenses: " + sumExpense.toString() + " $ <br>" ;
+        return "Raport dla okresu od " + start + " do " + end + "<br>" +
+                "Koszty całkowite: " + totalCosts + " zł <br>" +
+                "Pensje pracowników: " + sumTask.toString() + " zł <br>" +
+                "Pozostałe wydatki: " + sumExpense.toString() + " zł <br>" ;
     }
 
 }

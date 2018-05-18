@@ -31,12 +31,12 @@ public class ExpenseController {
     @ModelAttribute("expenses")
     public List<String> getExpenseName(){
         List<String> expenses = new ArrayList<>();
-        expenses.add("Electrity");
-        expenses.add("Water");
-        expenses.add("Gas");
-        expenses.add("Subsoil");
+        expenses.add("Prąd");
+        expenses.add("Woda");
+        expenses.add("Gaz");
+        expenses.add("Podłoże");
         expenses.add("Torf");
-        expenses.add("Others");
+        expenses.add("Inne");
 
         return expenses;
     }

@@ -1,13 +1,16 @@
 <%@include file="/resources/header.jsp" %>
 
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+
+
 
 <form method="post">
-    <br><br> Are you sure to delete? <br><br>
+    <br><br> Czy na pewno usunąć? <br><br>
     <input type="submit" value="Yes">
 </form>
 
 <br><br>
-<a href="/employee"> Cancel</a>
+<a href="/employee"> Anuluj</a>
 
 <%@include file="/resources/footer.jsp" %>
 

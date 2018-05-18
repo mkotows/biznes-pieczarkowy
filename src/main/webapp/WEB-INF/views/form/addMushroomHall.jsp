@@ -1,12 +1,15 @@
 <%@include file="/resources/header.jsp" %>
 
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+
+
 
 <form:form method="post" modelAttribute="mushroomHall">
-    <label>Name <form:input path="name"/></label>
+    <label>Nazwa <form:input path="name"/></label>
     <p><form:errors path="name" cssClass="error"/> </p>
-    <label>Description <form:input path="description"/></label><br>
+    <label>Opis dodatkowy <form:input path="description"/></label><br>
 
-    <input type="submit" value="Add">
+    <input type="submit" value="Dodaj">
 </form:form>
 
 

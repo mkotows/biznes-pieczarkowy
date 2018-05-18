@@ -43,11 +43,11 @@ public class TaskController {
     @ModelAttribute("tasks")
     public List<String> tasks(){
         List<String> tasks =  new ArrayList<>();
-        tasks.add("Preparing cultivation");
-        tasks.add("Caring for cultivation ");
-        tasks.add("Picking mushrooms");
-        tasks.add("Cleaning after cultivation");
-        tasks.add("Other");
+        tasks.add("Przygotowanie uprawy");
+        tasks.add("Technologia uprawy");
+        tasks.add("Zbieranie grzybów");
+        tasks.add("Sprzątanie po uprawie");
+        tasks.add("Inne");
 
         return tasks;
     }

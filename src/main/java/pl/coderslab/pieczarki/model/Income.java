@@ -18,19 +18,21 @@ public class Income {
     private String mushroom;
 
     @NotNull
-    private BigDecimal weight;
+    private Date date;
 
     @NotNull
     private BigDecimal pricePerKg;
 
-    private BigDecimal totalIncome;
-
     @NotNull
-    private Date date;
+    private BigDecimal weight;
+
+    private BigDecimal totalIncome;
 
     @ManyToOne
     @JoinColumn(name = "mushroomHallId")
     private MushroomHall mushroomHall;
+
+    private String description;
 
     public Income() {
     }
@@ -89,5 +91,13 @@ public class Income {
 
     public void setMushroomHall(MushroomHall mushroomHall) {
         this.mushroomHall = mushroomHall;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

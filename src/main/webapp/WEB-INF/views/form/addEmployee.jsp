@@ -1,15 +1,18 @@
 <%@include file="/resources/header.jsp" %>
 
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+
+
 
 <form:form method="post" modelAttribute="employee">
-    <label>Name <form:input path="name"/></label>
+    <label>Imię <form:input path="name"/></label>
     <p><form:errors path="name" cssClass="error"/> </p>
-    <label>Surname <form:input path="surname"/></label>
+    <label>Nazwisko <form:input path="surname"/></label>
     <p><form:errors path="surname" cssClass="error"/></p>
     <label>Email <form:input path="email"/></label>
     <p><form:errors path="email" cssClass="error"/></p>
-    <label>Phone <form:input path="phone"/></label><<br>
-    <input type="submit" value="Add">
+    <label>Telefon <form:input path="phone"/></label><br>
+    <input type="submit" value="Dodaj">
 </form:form>
 
 

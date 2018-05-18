@@ -10,7 +10,6 @@
 </form>
 
 <br><br>
-<a href="/mushroomHall"> Anuluj</a>
+<a href="/income"> Anuluj</a>
 
 <%@include file="/resources/footer.jsp" %>
-

@@ -5,12 +5,15 @@
   Time: 12:21
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%--<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
+    <%--<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>--%>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Mushroom Company</title>
     <link rel="stylesheet" type="text/css" href="/resources/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -22,11 +25,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 <div class="menu" >
-    <a href="/mushroomHall"><button class="btn btn-primary"> Mushroom Halls </button> </a>
-    <a href="/employee"><button class="btn btn-primary"> Employees </button> </a>
-    <a href="/expense"><button class="btn btn-primary"> Expenses </button> </a>
-    <a href="/task"><button class="btn btn-primary"> Tasks </button> </a>
-    <a href="/raport"> <button class="btn btn-danger"> Raports </button></a> <br>
+    <a href="/mushroomHall"><button class="btn btn-primary"> Hale pieczarkowe </button> </a>
+    <a href="/employee"><button class="btn btn-primary"> Pracownicy </button> </a>
+    <a href="/expense"><button class="btn btn-primary"> Wydatki </button> </a>
+    <a href="/task"><button class="btn btn-primary"> Wynagrodzenia </button> </a>
+    <a href="/income"><button class="btn btn-primary"> Przychody </button> </a>
+    <a href="/raport/expenses"> <button class="btn btn-danger"> Raport wydatków</button></a>
+    <a href="/raport/incomes"> <button class="btn btn-success"> Raport przychodów </button></a>
+    <a href="/raport"> <button class="btn btn-primary"> Raport finansowy </button></a> <br>
 </div>
 <br>
 <div>
