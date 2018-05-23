@@ -18,7 +18,6 @@ public class Expense {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "mushroomHallId")
     private MushroomHall mushroomHall;
 
     private String description;

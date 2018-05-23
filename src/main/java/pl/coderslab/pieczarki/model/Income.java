@@ -29,7 +29,6 @@ public class Income {
     private BigDecimal totalIncome;
 
     @ManyToOne
-    @JoinColumn(name = "mushroomHallId")
     private MushroomHall mushroomHall;
 
     private String description;

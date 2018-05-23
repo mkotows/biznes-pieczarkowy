@@ -2,6 +2,8 @@ package pl.coderslab.pieczarki.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "mushroomHalls")
@@ -15,6 +17,15 @@ public class MushroomHall {
     private String name;
 
     private String description;
+
+    @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
+    private List<Task> tasks = new ArrayList<>();
+
+    @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
+    private List<Expense> expenses = new ArrayList<>();
+
+    @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
+    private List<Income> incomes = new ArrayList<>();
 
     public MushroomHall() {
     }
@@ -43,8 +54,31 @@ public class MushroomHall {
         this.description = description;
     }
 
+    public List<Task> getTasks() {
+        return tasks;
+    }
 
-//    @Override
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
+    }
+
+    public List<Expense> getExpenses() {
+        return expenses;
+    }
+
+    public void setExpenses(List<Expense> expenses) {
+        this.expenses = expenses;
+    }
+
+    public List<Income> getIncomes() {
+        return incomes;
+    }
+
+    public void setIncomes(List<Income> incomes) {
+        this.incomes = incomes;
+    }
+
+    //    @Override
 //    public String toString() {
 //        if (this==null)
 //            return "All";

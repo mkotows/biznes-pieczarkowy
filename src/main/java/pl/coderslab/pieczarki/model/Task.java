@@ -33,8 +33,7 @@ public class Task {
     @ManyToMany
     private List<Employee> employees;
 
-    @ManyToOne//(fetch=FetchType.EAGER)
-    @JoinColumn(name="mushroomHallId")
+    @ManyToOne
     private MushroomHall mushroomHall;
 
     public Task() {
