@@ -4,6 +4,7 @@
 
 <h1>Wynik finansowy</h1>
 
+
 ${resultText}
 
 
