@@ -18,10 +18,10 @@ public class MushroomHall {
 
     private String description;
 
-    @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "mushroomHall", cascade= CascadeType.PERSIST)
     private List<Task> tasks = new ArrayList<>();
 
-    @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
+    @OneToMany(mappedBy = "mushroomHall", cascade= CascadeType.ALL)
     private List<Expense> expenses = new ArrayList<>();
 
     @OneToMany(mappedBy = "mushroomHall", cascade=CascadeType.ALL)
