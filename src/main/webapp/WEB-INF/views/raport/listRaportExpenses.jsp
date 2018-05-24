@@ -17,10 +17,10 @@
     </select>
     <br><br>
 
-    <label> Data początkowa <input type="date" name="start">
+    <label> Data początkowa <input type="date" name="start" required>
     </label> <br><br>
 
-    <label> Data końcowa <input type="date" name="end">
+    <label> Data końcowa <input type="date" name="end" required>
     </label> <br><br>
     <input type="submit" value="Generuj raport">
 </form>
