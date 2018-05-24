@@ -8,7 +8,7 @@
 <br><br>
 <form method="post" action="/raport/one">
 
-    <select name="hallId">
+    <select name="hallId" required>
 
         <c:forEach items="${mushroomHalls}" var="hall">
             <option value="${hall.id}"> ${hall.name} </option>
@@ -17,10 +17,10 @@
     </select>
     <br><br>
 
-    <label> Data początkowa <input type="date" name="start">
+    <label> Data początkowa <input type="date" name="start" required>
     </label> <br><br>
 
-    <label> Data końcowa <input type="date" name="end">
+    <label> Data końcowa <input type="date" name="end" required>
     </label> <br><br>
     <input type="submit" value="Generuj raport">
 </form>
@@ -31,10 +31,10 @@
 <h2> Raport ogólny</h2>
 
 <form method="post" action="/raport/all">
-    <label> Data początkowa <input type="date" name="start">
+    <label> Data początkowa <input type="date" name="start" required>
     </label> <br><br>
 
-    <label> Data końcowa <input type="date" name="end">
+    <label> Data końcowa <input type="date" name="end" required>
     </label> <br><br>
     <input type="submit" value="Generuj raport">
 </form>
