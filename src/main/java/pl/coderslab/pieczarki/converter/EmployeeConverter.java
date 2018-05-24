@@ -7,7 +7,6 @@ import pl.coderslab.pieczarki.model.Employee;
 import pl.coderslab.pieczarki.repository.EmployeeRepository;
 
 @Component
-//@ConfigurationPropertiesBinding
 public class EmployeeConverter implements Converter<String, Employee> {
 
     @Autowired
@@ -20,23 +19,3 @@ public class EmployeeConverter implements Converter<String, Employee> {
         return employee;
     }
 }
-
-
-
-
-//@Component
-////@ConfigurationPropertiesBinding
-//public class EmployeeConverter implements Converter<String, Employee> {
-//
-//    @Autowired
-//    private EmployeeRepository employeeRepository;
-//
-//    public EmployeeConverter() {
-//    }
-//
-//    @Override
-//    public Employee convert(String source) {
-//        Employee employee = employeeRepository.getOne(Long.parseLong(source));
-//        return employee;
-//    }
-//}

@@ -1,6 +1,5 @@
 package pl.coderslab.pieczarki.controller;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +13,6 @@ import pl.coderslab.pieczarki.model.Income;
 import pl.coderslab.pieczarki.model.MushroomHall;
 import pl.coderslab.pieczarki.model.Task;
 import pl.coderslab.pieczarki.repository.MushroomHallRepository;
-import pl.coderslab.pieczarki.repository.TaskRepository;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -25,8 +23,6 @@ public class MushroomHallController {
 
     @Autowired
     MushroomHallRepository mushroomHallRepository;
-    @Autowired
-    TaskRepository taskRepository;
 
     @GetMapping
     public String mushroomHalls(Model model){

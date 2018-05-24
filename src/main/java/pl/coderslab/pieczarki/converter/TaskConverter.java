@@ -7,7 +7,6 @@ import pl.coderslab.pieczarki.model.Task;
 import pl.coderslab.pieczarki.repository.TaskRepository;
 
 @Component
-//@ConfigurationPropertiesBinding
 public class TaskConverter implements Converter<String, Task> {
 
     @Autowired

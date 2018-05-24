@@ -10,9 +10,6 @@ import java.util.List;
 
 public interface ExpenseRepository extends JpaRepository<Expense,Long> {
 
-//    @Query
-//    List<Expense> findAllByMushroomHall(MushroomHall mushroomHall);
-
     @Query
     List<Expense> findAllByMushroomHallAndDateBetween(MushroomHall mushroomHall, Date start, Date end);
 
